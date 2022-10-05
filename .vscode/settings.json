@@ -1,0 +1,46 @@
+{
+  "editor.suggestSelection": "first",
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  "prettier.printWidth": 100,
+  "prettier.singleQuote": true,
+  "javascript.preferences.quoteStyle": "single",
+  "typescript.preferences.quoteStyle": "single",
+  "typescript.suggest.completeFunctionCalls": true,
+  "diffEditor.ignoreTrimWhitespace": false,
+  "html.format.maxPreserveNewLines": 1,
+  "html.format.wrapAttributes": "aligned-multiple",
+  "editor.tabSize": 2,
+  "editor.wordWrapColumn": 100,
+  "typescript.format.insertSpaceAfterTypeAssertion": true,
+  "[typescript]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[html]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "importSorter.importStringConfiguration.tabSize": 2,
+  "importSorter.sortConfiguration.removeUnusedImports": true,
+  "importSorter.importStringConfiguration.maximumNumberOfImportExpressionsPerLine.type": "newLineEachExpressionAfterCountLimit",
+  "multiCommand.commands": [
+    {
+      "command": "multiCommand.formatAndSave",
+      "sequence": [
+        "editor.action.formatDocument",
+        "multiCommand.eslintAutofix",
+        "multiCommand.save"
+      ]
+    },
+    {
+      "command": "multiCommand.eslintAutofix",
+      "interval": 2000,
+      "sequence": ["eslint.executeAutofix"]
+    },
+    {
+      "command": "multiCommand.save",
+      "sequence": ["workbench.action.files.save"]
+    }
+  ]
+}
